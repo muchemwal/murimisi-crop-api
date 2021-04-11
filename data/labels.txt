@@ -1,0 +1,7 @@
+0 Common_rust
+1 healthy
+2 Northen_leaf_blight
+3 Gray_leaf_spot
+4 Potato_healthy
+5 Potato_Late_blight
+6 Potato_Early_blight
