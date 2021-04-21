@@ -2,6 +2,7 @@ import io
 import base64
 import tensorflow.keras
 import numpy as np
+import requests
 
 from PIL import Image, ImageOps
 from helpers import get_labels
@@ -25,7 +26,8 @@ class PythonPredictor:
         """
 
         # covert image to base64
-        input_image = io.BytesIO(base64.b64decode(payload["base64"]))
+        #input_image = io.BytesIO(base64.b64decode(payload["base64"]))
+        input_image = requests.get(payload["url"]).content
 
         # Disable scientific notation for clarity
         np.set_printoptions(suppress=True)
